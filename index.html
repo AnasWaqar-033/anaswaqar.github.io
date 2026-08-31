@@ -1,1016 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <title>Anas Waqar · Frontend & AI Expert</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <!-- Google Font (Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas Waqar | Luxury Full-Stack & AI Specialist</title>
+    
+    <!-- 🚀 ADVANCED SEO META TAGS -->
+    <meta name="description" content="Anas Waqar - Professional Frontend Expert, AI Full-Stack Specialist, and Shopify Developer.">
+    <meta name="keywords" content="Anas Waqar, Frontend Expert, AI Specialist Pakistan, Shopify Developer">
+    <meta name="author" content="Anas Waqar">
+    <meta name="robots" content="index, follow">
+
+    <!-- 🔍 GOOGLE SEARCH CONSOLE VERIFICATION TAG -->
+    <meta name="google-site-verification" content="GSC-VERIFICATION-CODE-HERE" />
+
+    <!-- Font Awesome Icons & Premium Fonts -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <!-- 🎨 EMBEDDED GOLD LUXURY ACCENT STYLE (CSS) -->
     <style>
-        /* ============================================
-           FULLY RESPONSIVE – MOBILE + LAPTOP FRIENDLY
-           ============================================ */
+        :root {
+            --bg-deep: #090a0f;
+            --bg-card: rgba(255, 255, 255, 0.02);
+            --gold-primary: #d4af37;
+            --gold-glow: #f3e5ab;
+            --text-light: #f8fafc;
+            --text-grey: #94a3b8;
+            --border-glass: rgba(212, 175, 55, 0.12);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        :root {
-            --bg-primary: #090a14;
-            --bg-secondary: #0f1128;
-            --card-bg: rgba(255, 255, 255, 0.02);
-            --border-color: rgba(255, 255, 255, 0.05);
-            --text-primary: #f0f4ff;
-            --text-secondary: rgba(240, 244, 255, 0.45);
-            --accent-blue: #5b7cfa;
-            --accent-purple: #9d7bf5;
-            --accent-amber: #fbbf24;
-            --accent-coral: #f472b6;
-        }
-
-        html {
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
+            background-color: var(--bg-deep);
+            color: var(--text-light);
             overflow-x: hidden;
-            min-height: 100vh;
-            background-image: 
-                radial-gradient(ellipse at 20% 30%, rgba(91, 124, 250, 0.04) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 70%, rgba(157, 123, 245, 0.04) 0%, transparent 60%);
+            background-image: radial-gradient(circle at 50% 30%, #151622 0%, var(--bg-deep) 70%);
         }
 
-        .container {
-            max-width: 1150px;
-            margin: 0 auto;
-            padding: 0 clamp(1rem, 4vw, 2.5rem);
-        }
-
-        /* ----- REVEAL ANIMATIONS ----- */
-        .reveal {
-            opacity: 0;
-            transform: translateY(35px);
-            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ----- NAVIGATION – RESPONSIVE ----- */
-        .navbar {
+        #bg-canvas {
             position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            z-index: 999;
-            padding: 0.7rem clamp(1rem, 3vw, 2.5rem);
-            background: rgba(9, 10, 20, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Gold Glassmorphism Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            transition: 0.3s;
+            padding: 22px 8%;
+            background: rgba(9, 10, 15, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-glass);
+            z-index: 1000;
         }
 
         .logo {
-            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-light);
         }
+
         .logo span {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .logo i {
-            color: var(--accent-blue);
-            margin-right: 6px;
+            color: var(--gold-primary);
+            text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
         }
 
         .nav-links {
             display: flex;
-            gap: clamp(0.8rem, 2vw, 2rem);
             list-style: none;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: clamp(0.75rem, 1.2vw, 0.9rem);
-            transition: 0.3s;
-            position: relative;
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-blue);
-            transition: 0.3s ease;
-        }
-        .nav-links a:hover {
-            color: #fff;
-        }
-        .nav-links a:hover::after {
-            width: 100%;
         }
 
-        /* ----- HERO – RESPONSIVE ----- */
-        .hero {
+        .nav-links li a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 22px;
+            font-size: 15px;
+            font-weight: 400;
+            transition: 0.3s ease;
+        }
+
+        .nav-links li a:hover, .nav-links li a.active {
+            color: var(--gold-primary);
+            text-shadow: 0 0 10px var(--gold-glow);
+        }
+
+        /* Hero Layout */
+        .hero-section {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: clamp(5rem, 12vh, 7rem) 0 clamp(2rem, 5vh, 3rem);
-            position: relative;
-            z-index: 1;
+            justify-content: center;
+            text-align: center;
+            padding: 150px 8% 60px 8%;
         }
 
-        .hero-content {
-            max-width: 780px;
-            width: 100%;
+        .avatar-replacement {
+            width: 115px;
+            height: 115px;
+            background: rgba(212, 175, 55, 0.03);
+            border: 2px solid var(--gold-primary);
+            border-radius: 50%;
+            margin: 0 auto 35px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-size: 34px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15), inset 0 0 15px rgba(212, 175, 55, 0.08);
+            animation: elegantFloat 5s ease-in-out infinite;
         }
 
-        .hero-badge {
-            display: inline-block;
-            padding: 0.25rem clamp(0.8rem, 1.5vw, 1.4rem);
-            border-radius: 100px;
-            background: rgba(91, 124, 250, 0.06);
-            border: 1px solid rgba(91, 124, 250, 0.1);
-            font-size: clamp(0.6rem, 0.9vw, 0.7rem);
-            letter-spacing: 0.12em;
+        @keyframes elegantFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .glow-text {
+            font-size: 13px;
             text-transform: uppercase;
-            color: var(--accent-blue);
-            margin-bottom: clamp(0.8rem, 2vh, 1.2rem);
+            letter-spacing: 5px;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
             font-weight: 500;
         }
 
-        .hero h1 {
-            font-size: clamp(2.4rem, 10vw, 5.5rem);
-            font-weight: 900;
-            line-height: 1.04;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.3rem;
+        .hero-content h1 {
+            font-size: 58px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .hero h1 .highlight {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-coral));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            background-size: 300% 300%;
-            animation: gradientShift 7s ease-in-out infinite alternate;
+        .highlight {
+            color: var(--gold-primary);
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
         }
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+        .hero-content h2 {
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            color: #e2e8f0;
         }
 
-        .hero p {
-            color: var(--text-secondary);
-            font-size: clamp(0.95rem, 1.8vw, 1.2rem);
-            max-width: 540px;
-            font-weight: 300;
-            margin: 0.5rem 0 clamp(1.2rem, 3vh, 2rem);
-            line-height: 1.7;
+        .hero-content p {
+            max-width: 680px;
+            margin: 0 auto 40px auto;
+            color: var(--text-grey);
+            line-height: 1.8;
+            font-size: 15.5px;
         }
 
-        .hero-buttons {
+        .hero-btns {
             display: flex;
-            gap: clamp(0.5rem, 1.5vw, 0.8rem);
-            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
         .btn {
-            display: inline-block;
-            padding: clamp(0.5rem, 1.2vw, 0.7rem) clamp(1.2rem, 3vw, 2rem);
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+            padding: 14px 35px;
+            border-radius: 4px;
             text-decoration: none;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-            color: #090a14;
-            box-shadow: 0 4px 25px rgba(91, 124, 250, 0.2);
-        }
-        .btn-primary:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 10px 40px rgba(91, 124, 250, 0.3);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--text-primary);
-            border: 1.5px solid rgba(255, 255, 255, 0.06);
-        }
-        .btn-outline:hover {
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 30px rgba(91, 124, 250, 0.06);
-            transform: translateY(-3px);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: clamp(1.2rem, 4vw, 2.8rem);
-            margin-top: clamp(1.5rem, 4vh, 2.5rem);
-            flex-wrap: wrap;
-        }
-        .hero-stats div {
-            border-left: 2px solid rgba(91, 124, 250, 0.1);
-            padding-left: clamp(0.8rem, 2vw, 1.4rem);
-        }
-        .hero-stats div:first-child {
-            border-left: none;
-            padding-left: 0;
-        }
-        .hero-stats span {
-            font-weight: 700;
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            display: block;
-            color: var(--accent-blue);
-        }
-        .hero-stats small {
-            color: var(--text-secondary);
-            font-size: clamp(0.65rem, 0.9vw, 0.8rem);
-            font-weight: 400;
-        }
-
-        /* ----- SECTION TITLES ----- */
-        .section-title {
-            font-size: clamp(1.6rem, 4.5vw, 2.8rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.3rem;
-        }
-        .section-sub {
-            color: var(--text-secondary);
-            font-weight: 300;
-            font-size: clamp(0.85rem, 1.4vw, 1rem);
-            margin-bottom: clamp(1.5rem, 3vh, 2.5rem);
-        }
-
-        /* ----- SKILLS – RESPONSIVE GRID ----- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(140px, 20vw, 190px), 1fr));
-            gap: clamp(0.8rem, 1.5vw, 1.5rem);
-            margin-top: 1.5rem;
-        }
-
-        .skill-card {
-            padding: clamp(1rem, 2vw, 1.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
-            text-align: center;
-            border-radius: 1.3rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            position: relative;
-            overflow: hidden;
-        }
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(180deg, rgba(91, 124, 250, 0.02), transparent);
-            opacity: 0;
-            transition: 0.4s;
-        }
-        .skill-card:hover::before {
-            opacity: 1;
-        }
-        .skill-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(91, 124, 250, 0.1);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
-        }
-        .skill-card i {
-            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-            margin-bottom: 0.4rem;
-            display: inline-block;
-        }
-        .skill-card h4 {
-            font-size: clamp(0.8rem, 1.2vw, 1rem);
             font-weight: 600;
-        }
-        .skill-card p {
-            font-size: clamp(0.65rem, 0.9vw, 0.8rem);
-            color: var(--text-secondary);
-            font-weight: 300;
+            font-size: 14.5px;
+            transition: 0.4s ease;
+            letter-spacing: 0.5px;
         }
 
-        /* ----- PROJECTS – RESPONSIVE GRID ----- */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(220px, 30vw, 250px), 1fr));
-            gap: clamp(1rem, 2vw, 1.8rem);
-            margin-top: 1.5rem;
+        .primary-btn {
+            background: var(--gold-primary);
+            color: #0d0e12;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
         }
 
-        .project-card {
-            padding: clamp(1.2rem, 2vw, 1.8rem) clamp(1rem, 1.8vw, 1.5rem);
-            border-radius: 1.5rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-        }
-        .project-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(91, 124, 250, 0.08);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
-        }
-        .project-card i {
-            font-size: clamp(1.6rem, 3vw, 2.2rem);
-            margin-bottom: 0.5rem;
-        }
-        .project-card h3 {
-            font-size: clamp(0.95rem, 1.5vw, 1.15rem);
-            font-weight: 600;
-        }
-        .project-card p {
-            color: var(--text-secondary);
-            font-size: clamp(0.75rem, 1vw, 0.85rem);
-            font-weight: 300;
-        }
-        .project-tag {
-            display: inline-block;
-            background: rgba(91, 124, 250, 0.05);
-            padding: 0.1rem clamp(0.5rem, 1vw, 0.9rem);
-            border-radius: 30px;
-            font-size: clamp(0.5rem, 0.7vw, 0.6rem);
-            font-weight: 600;
-            color: var(--accent-blue);
-            margin-top: 0.5rem;
-            border: 1px solid rgba(91, 124, 250, 0.06);
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            background: #fff;
+            box-shadow: 0 6px 25px rgba(255, 255, 255, 0.3);
         }
 
-        /* ----- CONTACT – RESPONSIVE ----- */
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: clamp(1.5rem, 4vw, 3rem);
-            margin-top: 2rem;
-            align-items: start;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: clamp(0.6rem, 1.2vw, 0.9rem);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: clamp(0.6rem, 1.5vw, 1rem);
-            padding: clamp(0.6rem, 1.2vw, 0.9rem) clamp(0.8rem, 1.5vw, 1.2rem);
-            border-radius: 1rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            transition: 0.4s;
-        }
-        .contact-item:hover {
-            border-color: rgba(91, 124, 250, 0.08);
-            transform: translateX(5px);
-            box-shadow: 0 0 30px rgba(91, 124, 250, 0.02);
-        }
-        .contact-item i {
-            font-size: clamp(1.1rem, 2vw, 1.5rem);
-            width: clamp(28px, 4vw, 34px);
-            text-align: center;
-        }
-        .contact-item .details h4 {
-            font-size: clamp(0.6rem, 0.9vw, 0.75rem);
-            color: var(--text-secondary);
-            font-weight: 400;
-        }
-        .contact-item .details p {
-            font-size: clamp(0.75rem, 1.2vw, 0.95rem);
-            font-weight: 600;
-            word-break: break-all;
-        }
-
-        .social-links {
-            display: flex;
-            gap: clamp(1rem, 2.5vw, 1.8rem);
-            margin: 0.5rem 0 0.3rem;
-            flex-wrap: wrap;
-        }
-        .social-links a {
-            color: var(--text-secondary);
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
-            transition: 0.4s;
-        }
-        .social-links a:hover {
-            color: var(--accent-blue);
-            transform: translateY(-4px) scale(1.05);
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: clamp(0.4rem, 1vw, 0.7rem);
-            flex-wrap: wrap;
-            margin-top: 0.3rem;
-        }
-        .action-buttons .btn {
-            padding: clamp(0.3rem, 0.8vw, 0.45rem) clamp(0.8rem, 1.8vw, 1.3rem);
-            font-size: clamp(0.65rem, 1vw, 0.8rem);
-        }
-
-        .contact-form {
-            padding: clamp(1.2rem, 2.5vw, 2rem);
-            border-radius: 1.5rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-        }
-        .contact-form h3 {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            margin-bottom: 0.2rem;
-        }
-        .contact-form .form-sub {
-            color: var(--text-secondary);
-            font-size: clamp(0.75rem, 1.2vw, 0.9rem);
-            margin-bottom: clamp(0.8rem, 2vh, 1.4rem);
-        }
-
-        .form-group {
-            margin-bottom: clamp(0.5rem, 1.2vw, 0.9rem);
-        }
-        .form-group label {
-            display: block;
-            font-size: clamp(0.65rem, 0.9vw, 0.8rem);
-            font-weight: 500;
-            color: var(--text-secondary);
-            margin-bottom: 0.2rem;
-        }
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: clamp(0.4rem, 0.9vw, 0.65rem) clamp(0.5rem, 1vw, 0.9rem);
-            border-radius: 0.8rem;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(0.75rem, 1.1vw, 0.9rem);
-            transition: 0.3s;
-            outline: none;
-        }
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 0 3px rgba(91, 124, 250, 0.06);
-        }
-        .form-group textarea {
-            resize: vertical;
-            min-height: clamp(70px, 15vh, 100px);
-        }
-        .form-group select option {
-            background: #0f1128;
+        .secondary-btn {
+            border: 1px solid var(--border-glass);
             color: #fff;
-        }
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: clamp(0.5rem, 1.2vw, 0.9rem);
+            background: rgba(255,255,255,0.01);
         }
 
-        .submit-btn {
-            width: 100%;
-            padding: clamp(0.5rem, 1.2vw, 0.8rem);
-            border-radius: 0.8rem;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-            color: #090a14;
-            font-weight: 700;
-            font-size: clamp(0.8rem, 1.2vw, 0.95rem);
-            border: none;
-            cursor: pointer;
-            transition: 0.4s;
-            box-shadow: 0 4px 20px rgba(91, 124, 250, 0.1);
+        .secondary-btn:hover {
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+            transform: translateY(-2px);
         }
-        .submit-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 35px rgba(91, 124, 250, 0.2);
+        /* Luxury Layout Cards Setup */
+        section { padding: 110px 8%; }
+        .section-title { text-align: center; margin-bottom: 75px; }
+        .section-title h2 { font-family: 'Cinzel', serif; font-size: 38px; font-weight: 600; letter-spacing: 1px; }
+        .section-title h2 span { color: var(--gold-primary); text-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 35px; }
+        
+        .glass-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(12px);
+            padding: 45px 35px;
+            border-radius: 6px;
+            transition: 0.4s ease;
+            position: relative;
+        }
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.08);
+        }
+        .glass-card h3 { font-size: 21px; margin-bottom: 15px; font-weight: 600; letter-spacing: -0.5px; }
+        .glass-card p { color: var(--text-grey); font-size: 14.5px; line-height: 1.7; }
+        .card-icon { font-size: 35px; color: var(--gold-primary); margin-bottom: 25px; }
+
+        .skills-wrapper { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+        .tag-badge {
+            background: rgba(212, 175, 55, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+        .tag-badge i { color: var(--gold-primary); margin-right: 8px; }
+        .project-meta {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        .status-badge {
+            font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+            color: var(--gold-primary); font-weight: 600;
         }
 
-        .form-success {
-            display: none;
-            padding: 0.6rem;
-            border-radius: 0.8rem;
-            background: rgba(251, 191, 36, 0.04);
-            border: 1px solid rgba(251, 191, 36, 0.08);
-            color: var(--accent-amber);
-            text-align: center;
-            margin-top: 0.8rem;
-            font-size: clamp(0.8rem, 1vw, 0.9rem);
+        .contact-box {
+            max-width: 720px; margin: 0 auto; background: var(--bg-card);
+            border: 1px solid var(--border-glass); padding: 55px 45px;
+            border-radius: 8px; text-align: center; backdrop-filter: blur(12px);
         }
-        .form-success.show {
-            display: block;
-            animation: fadeSlide 0.4s ease;
+        .contact-box h3 { font-size: 26px; margin-bottom: 15px; }
+        .contact-box p { color: var(--text-grey); margin-bottom: 35px; }
+        .link-grid { display: flex; flex-direction: column; gap: 20px; }
+        
+        .contact-link-card {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 18px 25px; background: rgba(255,255,255,0.01);
+            border: 1px solid var(--border-glass); border-radius: 4px;
+            color: #cbd5e1; text-decoration: none; font-size: 16px; transition: 0.3s;
         }
+        .contact-link-card div i { color: var(--gold-primary); margin-right: 15px; font-size: 18px; }
+        .contact-link-card:hover { border-color: #fff; background: rgba(212, 175, 55, 0.02); transform: translateX(4px); color: #fff; }
+        .arrow-icon { font-size: 14px; color: var(--text-grey); }
+        footer { text-align: center; padding: 45px; border-top: 1px solid var(--border-glass); color: #555; font-size: 13px; }
 
-        @keyframes fadeSlide {
-            0% { opacity: 0; transform: translateY(-8px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        footer {
-            padding: clamp(1.5rem, 4vh, 2.5rem) 0;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.02);
-            color: rgba(240, 244, 255, 0.15);
-            font-size: clamp(0.7rem, 1vw, 0.85rem);
-            letter-spacing: 0.3px;
-        }
-
-        /* ============================================
-           RESPONSIVE BREAKPOINTS
-           ============================================ */
-
-        /* ----- MOBILE (max-width: 600px) ----- */
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-                padding: 0.5rem 0.8rem;
-                gap: 0.3rem;
-            }
-            .nav-links {
-                gap: 0.6rem;
-                justify-content: center;
-            }
-            .nav-links a {
-                font-size: 0.7rem;
-            }
-            .hero {
-                padding-top: 6rem;
-                text-align: center;
-            }
-            .hero p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .hero-stats {
-                justify-content: center;
-            }
-            .hero-stats div {
-                border-left: none;
-                padding-left: 0;
-                text-align: center;
-            }
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            .social-links {
-                justify-content: center;
-            }
-            .action-buttons {
-                justify-content: center;
-            }
-            .contact-item {
-                padding: 0.6rem 0.8rem;
-            }
-            .contact-item i {
-                width: 24px;
-                font-size: 1rem;
-            }
-            .skills-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 0.6rem;
-            }
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            .container {
-                padding: 0 0.8rem;
-            }
-        }
-
-        /* ----- TABLET (601px - 1024px) ----- */
-        @media (min-width: 601px) and (max-width: 1024px) {
-            .hero {
-                padding-top: 6rem;
-                text-align: center;
-            }
-            .hero p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .hero-stats {
-                justify-content: center;
-            }
-            .hero-stats div {
-                border-left: none;
-                padding-left: 0;
-            }
-            .hero h1 {
-                font-size: clamp(3rem, 8vw, 4rem);
-            }
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .social-links {
-                justify-content: center;
-            }
-            .action-buttons {
-                justify-content: center;
-            }
-            .skills-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* ----- LAPTOP (1025px+) ----- */
-        @media (min-width: 1025px) {
-            .hero {
-                text-align: left;
-            }
-            .hero p {
-                margin-left: 0;
-                margin-right: 0;
-            }
-            .hero-buttons {
-                justify-content: flex-start;
-            }
-            .hero-stats {
-                justify-content: flex-start;
-            }
-            .hero-stats div {
-                border-left: 2px solid rgba(91, 124, 250, 0.1);
-                padding-left: 1.4rem;
-            }
-            .hero-stats div:first-child {
-                border-left: none;
-                padding-left: 0;
-            }
-            .skills-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .projects-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .contact-wrapper {
-                grid-template-columns: 1fr 1fr;
-            }
-            .social-links {
-                justify-content: flex-start;
-            }
-            .action-buttons {
-                justify-content: flex-start;
-            }
-        }
-
-        /* ----- LARGE SCREEN (1400px+) ----- */
-        @media (min-width: 1400px) {
-            .container {
-                max-width: 1300px;
-            }
-            .skills-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .projects-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .hero h1 {
-                font-size: 5.5rem;
-            }
+        @media (max-width: 768px) {
+            .navbar { padding: 22px 5%; } .nav-links { display: none; }
+            .hero-content h1 { font-size: 38px; } .hero-content h2 { font-size: 20px; }
+            section { padding: 80px 5%; }
         }
     </style>
 </head>
 <body>
+    <canvas id="bg-canvas"></canvas>
 
-    <!-- ===== NAV ===== -->
     <nav class="navbar">
-        <div class="logo">
-            <i class="fas fa-cube"></i> Anas<span>·Waqar</span>
-        </div>
+        <!-- 📌 Logo Updated to Anas Waqar -->
+        <div class="logo">Anas <span>Waqar</span></div>
         <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- ===== HERO ===== -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-bolt" style="margin-right:6px;"></i> Frontend · AI Expert
-                </div>
-                <h1>
-                    Anas <span class="highlight">Waqar</span>
-                </h1>
-                <p>
-                    Frontend Expert · AI Full‑Stack · Shopify Developer · Graphic Designer · MS Office Specialist
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> View Work
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-paper-plane"></i> Contact
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div>
-                        <span>I.Com</span>
-                        <small>Final Year</small>
-                    </div>
-                    <div>
-                        <span>21 Dec 2011</span>
-                        <small>Date of Birth</small>
-                    </div>
-                    <div>
-                        <span>5+</span>
-                        <small>Projects</small>
-                    </div>
+    <header id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="avatar-replacement">AW</div>
+            <h3 class="glow-text"><i class="fas fa-shield-alt"></i> Core Integration Operational</h3>
+            <h1>Hi, I'm <span class="highlight">Anas Waqar</span></h1>
+            <h2>Frontend Expert & <span class="highlight">AI Full-Stack Specialist</span></h2>
+            <p>Architecting expensive corporate interfaces, custom automation protocols, and high-performance commercial Shopify web assets.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn"><i class="fas fa-folder-open"></i> Portfolio</a>
+                <a href="#contact" class="btn secondary-btn"><i class="fas fa-envelope"></i> Connect Node</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="section-title">
+            <h2>About <span>The Engineer</span></h2>
+        </div>
+        <div class="grid-layout">
+            <div class="glass-card">
+                <i class="fas fa-graduation-cap card-icon"></i>
+                <h3>Academic & Development Profile</h3>
+                <p>Currently final year student of <strong>I.Com (2026)</strong>. Overriding industry boundaries by working at the intersection of enterprise system management, dynamic modern view trees, and serverless background logic.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-cubes card-icon"></i>
+                <h3>Verified Capability Matrix</h3>
+                <div class="skills-wrapper">
+                    <span class="tag-badge"><i class="fas fa-code-branch"></i> Frontend Tree</span>
+                    <span class="tag-badge"><i class="fas fa-brain"></i> Agent Logic</span>
+                    <span class="tag-badge"><i class="fab fa-shopify"></i> Liquid Platform</span>
+                    <span class="tag-badge"><i class="fas fa-bezier-curve"></i> Asset Vectoring</span>
+                    <span class="tag-badge"><i class="fas fa-table"></i> Structured Data</span>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- ===== SKILLS ===== -->
-    <section id="skills" style="padding:clamp(2rem, 6vh, 4rem) 0;">
-        <div class="container">
-            <h2 class="section-title reveal">⚡ Core Expertise</h2>
-            <p class="section-sub reveal">Specialized in modern web technologies & AI-powered solutions</p>
-            <div class="skills-grid">
-                <div class="skill-card reveal">
-                    <i class="fas fa-code" style="color:var(--accent-blue);"></i>
-                    <h4>Frontend Expert</h4>
-                    <p>React, Vue, Tailwind</p>
-                </div>
-                <div class="skill-card reveal">
-                    <i class="fas fa-robot" style="color:var(--accent-purple);"></i>
-                    <h4>AI Full‑Stack</h4>
-                    <p>Backend + AI automation</p>
-                </div>
-                <div class="skill-card reveal">
-                    <i class="fas fa-store" style="color:var(--accent-coral);"></i>
-                    <h4>Shopify Development</h4>
-                    <p>Premium stores · Themes</p>
-                </div>
-                <div class="skill-card reveal">
-                    <i class="fas fa-paint-brush" style="color:var(--accent-amber);"></i>
-                    <h4>Graphic Designing</h4>
-                    <p>Branding · Visual content</p>
-                </div>
-                <div class="skill-card reveal">
-                    <i class="fas fa-file-excel" style="color:#fbbf24;"></i>
-                    <h4>MS Office Automation</h4>
-                    <p>Advanced Excel · Data Entry</p>
-                </div>
-                <div class="skill-card reveal">
-                    <i class="fas fa-cogs" style="color:#818cf8;"></i>
-                    <h4>Full‑Stack with AI</h4>
-                    <p>End‑to‑end AI systems</p>
-                </div>
+    <section id="services">
+        <div class="section-title">
+            <h2>Operations <span>& Services</span></h2>
+        </div>
+        <div class="grid-layout">
+            <div class="glass-card">
+                <i class="fas fa-desktop card-icon"></i>
+                <h3>Frontend Engineering</h3>
+                <p>Deploying ultra-responsive user views optimized with fluid layouts, semantic schemas, and pixel-accurate interface design structures.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-microchip card-icon"></i>
+                <h3>AI Full-Stack Architecture</h3>
+                <p>Integrating artificial intelligence prompts, model logic, and cloud endpoints into system backends to automate custom workflows.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fab fa-shopify card-icon"></i>
+                <h3>Shopify Store Production</h3>
+                <p>Developing fully engineered premium store dashboards incorporating complex layouts, optimized custom checkout metrics, and configurations.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-chart-line card-icon"></i>
+                <h3>Graphics & Office Logistics</h3>
+                <p>Providing custom corporate branding layouts and high-speed corporate analytics, advanced report writing, and assignment tracking.</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== PROJECTS ===== -->
-    <section id="projects" style="padding:clamp(2rem, 6vh, 4rem) 0;">
-        <div class="container">
-            <h2 class="section-title reveal">🚀 Portfolio Projects</h2>
-            <p class="section-sub reveal">Real-world solutions built with passion & precision</p>
-            <div class="projects-grid">
-                <div class="project-card reveal">
-                    <i class="fas fa-school" style="color:var(--accent-blue);"></i>
-                    <h3>Grace Valley Schooling</h3>
-                    <p>Educational web infrastructure</p>
-                    <span class="project-tag"><i class="fas fa-check-circle"></i> Live</span>
-                </div>
-                <div class="project-card reveal">
-                    <i class="fas fa-graduation-cap" style="color:var(--accent-purple);"></i>
-                    <h3>Al Amal Schooling</h3>
-                    <p>Clean, accessible web framework</p>
-                    <span class="project-tag"><i class="fas fa-check-circle"></i> Live</span>
-                </div>
-                <div class="project-card reveal">
-                    <i class="fas fa-mosque" style="color:var(--accent-amber);"></i>
-                    <h3>Idara Tun Noor Madarsa</h3>
-                    <p>Community management platform</p>
-                    <span class="project-tag"><i class="fas fa-check-circle"></i> Optimized</span>
-                </div>
-                <div class="project-card reveal">
-                    <i class="fas fa-shopping-cart" style="color:var(--accent-coral);"></i>
-                    <h3>Ijaz Shops (Shopify)</h3>
-                    <p>Optimized e‑commerce storefront</p>
-                    <span class="project-tag"><i class="fas fa-check-circle"></i> Launch</span>
-                </div>
-                <div class="project-card reveal">
-                    <i class="fas fa-file-alt" style="color:#fbbf24;"></i>
-                    <h3>MS Office Assignments</h3>
-                    <p>Complex data & analytical entry</p>
-                    <span class="project-tag"><i class="fas fa-check-circle"></i> Completed</span>
-                </div>
+    <section id="projects">
+        <div class="section-title">
+            <h2>Production <span>Registry</span></h2>
+        </div>
+        <div class="grid-layout">
+            <div class="glass-card">
+                <i class="fas fa-school card-icon"></i>
+                <h3>Grace Valley Schooling System</h3>
+                <p>Complete execution of administrative web portal systems managing automated operational interfaces.</p>
+                <div class="project-meta"><span class="status-badge"><i class="fas fa-check-circle"></i> System Active</span></div>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-book-reader card-icon"></i>
+                <h3>Al Amal Schooling System</h3>
+                <p>Production release of lightweight web layout maximizing access protocols and resource deployment optimization.</p>
+                <div class="project-meta"><span class="status-badge"><i class="fas fa-check-circle"></i> System Active</span></div>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-mosque card-icon"></i>
+                <h3>Idara Tun Noor Madarsa</h3>
+                <p>Custom structural platform built from raw source files to establish highly optimized regional user accessibility matrices.</p>
+                <div class="project-meta"><span class="status-badge"><i class="fas fa-check-circle"></i> Fully Optimized</span></div>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-shopping-bag card-icon"></i>
+                <h3>Ijaz Shops</h3>
+                <p>E-commerce deployment featuring a customized Liquid code layer, performance caching, and highly responsive mobile shopping paths.</p>
+                <div class="project-meta"><span class="status-badge"><i class="fas fa-check-circle"></i> Operational</span></div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" style="padding:clamp(2rem, 6vh, 4rem) 0 clamp(1rem, 3vh, 2rem);">
-        <div class="container">
-            <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:clamp(1.2rem, 3vw, 2rem); padding:clamp(1.2rem, 3vw, 2.5rem) clamp(1rem, 2.5vw, 2rem);">
-                <h2 class="section-title reveal">📬 Contact</h2>
-                <p class="section-sub reveal">Let's connect and build something amazing together</p>
-
-                <div class="contact-wrapper">
-                    <div class="contact-info reveal">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope" style="color:var(--accent-blue);"></i>
-                            <div class="details">
-                                <h4>Business Email</h4>
-                                <p>solutionsapexecom@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone" style="color:var(--accent-purple);"></i>
-                            <div class="details">
-                                <h4>Phone</h4>
-                                <p>03112568504</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp" style="color:var(--accent-amber);"></i>
-                            <div class="details">
-                                <h4>WhatsApp Business</h4>
-                                <p>03101122510</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-calendar-alt" style="color:var(--accent-coral);"></i>
-                            <div class="details">
-                                <h4>Date of Birth</h4>
-                                <p>21 December 2011</p>
-                            </div>
-                        </div>
-
-                        <div class="social-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        </div>
-
-                        <div class="action-buttons">
-                            <a href="mailto:solutionsapexecom@gmail.com" class="btn btn-primary">
-                                <i class="fas fa-envelope"></i> Email
-                            </a>
-                            <a href="tel:03112568504" class="btn btn-outline">
-                                <i class="fas fa-phone"></i> Call
-                            </a>
-                            <a href="https://wa.me/923101122510" target="_blank" class="btn btn-outline" style="border-color:rgba(251,191,36,0.1);">
-                                <i class="fab fa-whatsapp" style="color:var(--accent-amber);"></i> WhatsApp
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contact-form reveal">
-                        <h3>Send a Message</h3>
-                        <p class="form-sub">I'll get back to you within 24 hours</p>
-                        <form id="contactForm" onsubmit="return handleSubmit(event)">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" id="name" placeholder="Your name" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" id="email" placeholder="you@example.com" required />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <select id="subject">
-                                    <option value="Project Inquiry">Project Inquiry</option>
-                                    <option value="Frontend Development">Frontend Development</option>
-                                    <option value="AI Integration">AI Integration</option>
-                                    <option value="Shopify Store">Shopify Store</option>
-                                    <option value="Graphic Design">Graphic Design</option>
-                                    <option value="MS Office">MS Office</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" placeholder="Tell me about your project..." required></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn">
-                                <i class="fas fa-paper-plane"></i> Send Message
-                            </button>
-                            <div id="formSuccess" class="form-success">
-                                <i class="fas fa-check-circle"></i> Message sent successfully!
-                            </div>
-                        </form>
-                    </div>
-                </div>
+    <section id="contact">
+        <div class="section-title">
+            <h2>Secure <span>Gateway</span></h2>
+        </div>
+        <div class="contact-box">
+            <i class="fas fa-network-wired card-icon" style="font-size: 45px;"></i>
+            <h3>Initiate Direct Network Link</h3>
+            <p>Available for commercial-tier programming contracts, corporate automation frameworks, and active contract engineering assignments.</p>
+            <div class="link-grid">
+                <a href="mailto:solutionsapexecom@gmail.com" class="contact-link-card">
+                    <div><i class="fas fa-envelope"></i> solutionsapexecom@gmail.com</div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+                <a href="tel:03112568504" class="contact-link-card">
+                    <div><i class="fas fa-phone"></i> +92 311 2568504</div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+                <a href="https://wa.me" target="_blank" class="contact-link-card">
+                    <div><i class="fab fa-whatsapp"></i> Establish WhatsApp Secure Link</div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
-        <p>© 2026 Anas Waqar · Frontend & AI Expert</p>
+        <p>&copy; 2026 ANAS WAQAR. All Rights Reserved. Engine Managed Secure Node Deployment.</p>
     </footer>
 
-    <!-- ===== SCRIPTS ===== -->
     <script>
-        // Scroll reveal
-        document.addEventListener('DOMContentLoaded', function() {
-            const reveals = document.querySelectorAll('.reveal');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-            reveals.forEach(el => observer.observe(el));
-        });
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
 
-        // Smooth nav
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    history.pushState(null, null, this.getAttribute('href'));
-                }
-            });
-        });
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
 
-        // Form handler
-        function handleSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+        const particles = [];
+        const particleCount = 55;
 
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields.');
-                return false;
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.speedX = Math.random() * 0.3 - 0.15;
+                this.speedY = Math.random() * 0.3 - 0.15;
             }
 
-            const successDiv = document.getElementById('formSuccess');
-            successDiv.classList.add('show');
-            document.getElementById('contactForm').reset();
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
 
-            setTimeout(() => {
-                successDiv.classList.remove('show');
-            }, 5000);
+                if (this.x > width) this.x = 0;
+                else if (this.x < 0) this.x = width;
 
-            console.log('Form submitted:', { name, email, subject: document.getElementById('subject').value, message });
-            return false;
+                if (this.y > height) this.y = 0;
+                else if (this.y < 0) this.y = height;
+            }
+
+            draw() {
+                ctx.fillStyle = 'rgba(212, 175, 55, 0.22)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
         }
+
+        function init() {
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        init();
+        animate();
     </script>
 </body>
 </html>
