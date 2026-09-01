@@ -1,489 +1,365 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="OJhZlveKdMXOHn-GKSGi6obMd8VBlYg5NjMUTncPg4I" />
-    <title>Anas Waqar | Luxury Full-Stack & AI Specialist</title>
-    
-    <!-- 🚀 ADVANCED SEO META TAGS -->
-    <meta name="description" content="Anas Waqar - Professional Frontend Expert, AI Full-Stack Specialist, and Shopify Developer.">
-    <meta name="keywords" content="Anas Waqar, Frontend Expert, AI Specialist Pakistan, Shopify Developer">
+    <title>Anas Waqar | Full-Stack Web Architect & AI Specialist</title>
+    <meta name="description" content="Official Portfolio of Anas Waqar - Full-Stack AI Developer, Shopify Liquid Expert, Graphic Designer, and Data Architect.">
+    <meta name="keywords" content="Anas Waqar, Full Stack Developer, AI Developer, Shopify Specialist, UI/UX Designer, Web Architect Pakistan">
     <meta name="author" content="Anas Waqar">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://solutionsapexecom.com/">
 
-    <!-- 🔍 GOOGLE SEARCH CONSOLE VERIFICATION TAG -->
-    <meta name="google-site-verification" content="GSC-VERIFICATION-CODE-HERE" />
+    <meta property="og:title" content="Anas Waqar | Full-Stack Web Architect & AI Specialist">
+    <meta property="og:description" content="Explore high-impact Web Applications, Shopify Stores, and AI Solutions by Anas Waqar.">
+    <meta property="og:image" content="https://solutionsapexecom.com/og-image.jpg">
+    <meta property="og:url" content="https://solutionsapexecom.com/">
+    <meta property="og:type" content="website">
 
-    <!-- Font Awesome Icons & Premium Fonts -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <link href="https://googleapis.com" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- 🎨 EMBEDDED GOLD LUXURY ACCENT STYLE (CSS) -->
     <style>
-        :root {
-            --bg-deep: #090a0f;
-            --bg-card: rgba(255, 255, 255, 0.02);
-            --gold-primary: #d4af37;
-            --gold-glow: #f3e5ab;
-            --text-light: #f8fafc;
-            --text-grey: #94a3b8;
-            --border-glass: rgba(212, 175, 55, 0.12);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-
         body {
-            background-color: var(--bg-deep);
-            color: var(--text-light);
+            background-color: #030712;
+            color: #f3f4f6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             overflow-x: hidden;
-            background-image: radial-gradient(circle at 50% 30%, #151622 0%, var(--bg-deep) 70%);
         }
 
-        #bg-canvas {
+        /* Glassmorphism Panel */
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-panel:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        /* Ambient Background Glow */
+        .ambient-glow {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(147, 51, 234, 0.08) 50%, rgba(0,0,0,0) 70%);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: -1;
             pointer-events: none;
         }
-
-        /* Gold Glassmorphism Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 22px 8%;
-            background: rgba(9, 10, 15, 0.85);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid var(--border-glass);
-            z-index: 1000;
-        }
-
-        .logo {
-            font-family: 'Cinzel', serif;
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--text-light);
-        }
-
-        .logo span {
-            color: var(--gold-primary);
-            text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin: 0 22px;
-            font-size: 15px;
-            font-weight: 400;
-            transition: 0.3s ease;
-        }
-
-        .nav-links li a:hover, .nav-links li a.active {
-            color: var(--gold-primary);
-            text-shadow: 0 0 10px var(--gold-glow);
-        }
-
-        /* Hero Layout */
-        .hero-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 150px 8% 60px 8%;
-        }
-
-        .avatar-replacement {
-            width: 115px;
-            height: 115px;
-            background: rgba(212, 175, 55, 0.03);
-            border: 2px solid var(--gold-primary);
-            border-radius: 50%;
-            margin: 0 auto 35px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Cinzel', serif;
-            font-size: 34px;
-            font-weight: 700;
-            color: var(--gold-primary);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15), inset 0 0 15px rgba(212, 175, 55, 0.08);
-            animation: elegantFloat 5s ease-in-out infinite;
-        }
-
-        @keyframes elegantFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        .glow-text {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: var(--gold-primary);
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .hero-content h1 {
-            font-size: 58px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .highlight {
-            color: var(--gold-primary);
-            text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-        }
-
-        .hero-content h2 {
-            font-size: 25px;
-            font-weight: 500;
-            margin-bottom: 25px;
-            color: #e2e8f0;
-        }
-
-        .hero-content p {
-            max-width: 680px;
-            margin: 0 auto 40px auto;
-            color: var(--text-grey);
-            line-height: 1.8;
-            font-size: 15.5px;
-        }
-
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .btn {
-            padding: 14px 35px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14.5px;
-            transition: 0.4s ease;
-            letter-spacing: 0.5px;
-        }
-
-        .primary-btn {
-            background: var(--gold-primary);
-            color: #0d0e12;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-        }
-
-        .primary-btn:hover {
-            transform: translateY(-2px);
-            background: #fff;
-            box-shadow: 0 6px 25px rgba(255, 255, 255, 0.3);
-        }
-
-        .secondary-btn {
-            border: 1px solid var(--border-glass);
-            color: #fff;
-            background: rgba(255,255,255,0.01);
-        }
-
-        .secondary-btn:hover {
-            border-color: var(--gold-primary);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
-            transform: translateY(-2px);
-        }
-        /* Luxury Layout Cards Setup */
-        section { padding: 110px 8%; }
-        .section-title { text-align: center; margin-bottom: 75px; }
-        .section-title h2 { font-family: 'Cinzel', serif; font-size: 38px; font-weight: 600; letter-spacing: 1px; }
-        .section-title h2 span { color: var(--gold-primary); text-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
-        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 35px; }
-        
-        .glass-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
-            backdrop-filter: blur(12px);
-            padding: 45px 35px;
-            border-radius: 6px;
-            transition: 0.4s ease;
-            position: relative;
-        }
-        .glass-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--gold-primary);
-            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.08);
-        }
-        .glass-card h3 { font-size: 21px; margin-bottom: 15px; font-weight: 600; letter-spacing: -0.5px; }
-        .glass-card p { color: var(--text-grey); font-size: 14.5px; line-height: 1.7; }
-        .card-icon { font-size: 35px; color: var(--gold-primary); margin-bottom: 25px; }
-
-        .skills-wrapper { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-        .tag-badge {
-            background: rgba(212, 175, 55, 0.02);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 13px;
-            color: #cbd5e1;
-        }
-        .tag-badge i { color: var(--gold-primary); margin-right: 8px; }
-        .project-meta {
-            display: flex; justify-content: space-between; align-items: center;
-            margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.04);
-        }
-        .status-badge {
-            font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
-            color: var(--gold-primary); font-weight: 600;
-        }
-
-        .contact-box {
-            max-width: 720px; margin: 0 auto; background: var(--bg-card);
-            border: 1px solid var(--border-glass); padding: 55px 45px;
-            border-radius: 8px; text-align: center; backdrop-filter: blur(12px);
-        }
-        .contact-box h3 { font-size: 26px; margin-bottom: 15px; }
-        .contact-box p { color: var(--text-grey); margin-bottom: 35px; }
-        .link-grid { display: flex; flex-direction: column; gap: 20px; }
-        
-        .contact-link-card {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 18px 25px; background: rgba(255,255,255,0.01);
-            border: 1px solid var(--border-glass); border-radius: 4px;
-            color: #cbd5e1; text-decoration: none; font-size: 16px; transition: 0.3s;
-        }
-        .contact-link-card div i { color: var(--gold-primary); margin-right: 15px; font-size: 18px; }
-        .contact-link-card:hover { border-color: #fff; background: rgba(212, 175, 55, 0.02); transform: translateX(4px); color: #fff; }
-        .arrow-icon { font-size: 14px; color: var(--text-grey); }
-        footer { text-align: center; padding: 45px; border-top: 1px solid var(--border-glass); color: #555; font-size: 13px; }
-
-        @media (max-width: 768px) {
-            .navbar { padding: 22px 5%; } .nav-links { display: none; }
-            .hero-content h1 { font-size: 38px; } .hero-content h2 { font-size: 20px; }
-            section { padding: 80px 5%; }
-        }
     </style>
 </head>
-<body>
-    <canvas id="bg-canvas"></canvas>
+<body class="selection:bg-cyan-500 selection:text-black">
 
-    <nav class="navbar">
-        <!-- 📌 Logo Updated to Anas Waqar -->
-        <div class="logo">Anas <span>Waqar</span></div>
-        <ul class="nav-links">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <div class="ambient-glow"></div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 py-4">
+        <div class="max-w-6xl mx-auto glass-panel rounded-2xl px-6 py-3.5 flex justify-between items-center">
+            
+            <a href="#" class="text-xl font-extrabold tracking-wider text-white">
+                ANAS WAQAR<span class="text-cyan-400">.</span>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8 text-xs font-mono tracking-wider text-slate-300">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">// ABOUT</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">// SKILLS</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">// PROJECTS</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">// CONTACT</a>
+            </div>
+
+            <a href="https://wa.me/923101122510" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold text-xs px-4 py-2.5 rounded-xl hover:opacity-90 transition shadow-lg shadow-cyan-500/20">
+                <i class="fa-brands fa-whatsapp text-sm"></i> Direct Chat
+            </a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden max-w-6xl mx-auto mt-2 glass-panel rounded-2xl p-6 space-y-4 text-center font-mono text-xs">
+            <a href="#about" class="block text-slate-300 hover:text-cyan-400 py-1">// ABOUT</a>
+            <a href="#skills" class="block text-slate-300 hover:text-cyan-400 py-1">// SKILLS</a>
+            <a href="#projects" class="block text-slate-300 hover:text-cyan-400 py-1">// PROJECTS</a>
+            <a href="#contact" class="block text-slate-300 hover:text-cyan-400 py-1">// CONTACT</a>
+            <a href="https://wa.me/923101122510" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-cyan-500 text-slate-950 font-bold py-2.5 rounded-xl">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+            </a>
+        </div>
     </nav>
 
-    <header id="home" class="hero-section">
-        <div class="hero-content">
-            <div class="avatar-replacement">AW</div>
-            <h3 class="glow-text"><i class="fas fa-shield-alt"></i> Core Integration Operational</h3>
-            <h1>Hi, I'm <span class="highlight">Anas Waqar</span></h1>
-            <h2>Frontend Expert & <span class="highlight">AI Full-Stack Specialist</span></h2>
-            <p>Architecting expensive corporate interfaces, custom automation protocols, and high-performance commercial Shopify web assets.</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn primary-btn"><i class="fas fa-folder-open"></i> Portfolio</a>
-                <a href="#contact" class="btn secondary-btn"><i class="fas fa-envelope"></i> Connect Node</a>
-            </div>
-        </div>
-    </header>
 
-    <section id="about">
-        <div class="section-title">
-            <h2>About <span>The Engineer</span></h2>
-        </div>
-        <div class="grid-layout">
-            <div class="glass-card">
-                <i class="fas fa-graduation-cap card-icon"></i>
-                <h3>Academic & Development Profile</h3>
-                <p>Currently final year student of <strong>I.Com (2026)</strong>. Overriding industry boundaries by working at the intersection of enterprise system management, dynamic modern view trees, and serverless background logic.</p>
+    <section class="min-h-screen flex items-center justify-center pt-24 px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-cyan-400 text-xs font-mono border border-cyan-500/20">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                Full-Stack AI & Web Architect
             </div>
-            <div class="glass-card">
-                <i class="fas fa-cubes card-icon"></i>
-                <h3>Verified Capability Matrix</h3>
-                <div class="skills-wrapper">
-                    <span class="tag-badge"><i class="fas fa-code-branch"></i> Frontend Tree</span>
-                    <span class="tag-badge"><i class="fas fa-brain"></i> Agent Logic</span>
-                    <span class="tag-badge"><i class="fab fa-shopify"></i> Liquid Platform</span>
-                    <span class="tag-badge"><i class="fas fa-bezier-curve"></i> Asset Vectoring</span>
-                    <span class="tag-badge"><i class="fas fa-table"></i> Structured Data</span>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight text-white">
+                Designing High-Performance <br>
+                <span class="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
+                    Digital Platforms & Web Apps
+                </span>
+            </h1>
+
+            <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Specialized in Web Architecture, Custom AI Models Integration, Shopify Liquid Themes, Graphic Visual Systems, and Enterprise Data Analytics.
+            </p>
+
+            <div class="flex flex-wrap gap-4 justify-center pt-4">
+                <a href="#projects" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold font-mono text-xs px-7 py-3.5 rounded-xl transition shadow-lg shadow-cyan-500/20">
+                    View Featured Work
+                </a>
+                <a href="#contact" class="glass-panel text-slate-300 font-mono text-xs font-bold px-7 py-3.5 rounded-xl hover:text-white transition">
+                    Get In Touch
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl space-y-6">
+                <span class="text-xs font-mono text-cyan-400 tracking-widest">// PROFESSIONAL SUMMARY</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-white">About Anas Waqar</h2>
+                
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Main Full-Stack Developer aur AI Specialist hoon. Business goals ko samajhte hue clean, optimized, aur scale hone wala software code architecture design karna mera primary goal hota hai. From responsive frontends to AI wrappers and Shopify setups — complete digital solution provide karta hoon.
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 text-center font-mono">
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                        <h3 class="text-xl font-bold text-cyan-400">AI Integration</h3>
+                        <p class="text-[11px] text-slate-400 mt-1">REST APIs & Models</p>
+                    </div>
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                        <h3 class="text-xl font-bold text-sky-400">Shopify</h3>
+                        <p class="text-[11px] text-slate-400 mt-1">Liquid & Stores</p>
+                    </div>
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                        <h3 class="text-xl font-bold text-indigo-400">UI/UX Design</h3>
+                        <p class="text-[11px] text-slate-400 mt-1">Graphic Branding</p>
+                    </div>
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                        <h3 class="text-xl font-bold text-teal-400">MS Office</h3>
+                        <p class="text-[11px] text-slate-400 mt-1">Excel & Automation</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="services">
-        <div class="section-title">
-            <h2>Operations <span>& Services</span></h2>
-        </div>
-        <div class="grid-layout">
-            <div class="glass-card">
-                <i class="fas fa-desktop card-icon"></i>
-                <h3>Frontend Engineering</h3>
-                <p>Deploying ultra-responsive user views optimized with fluid layouts, semantic schemas, and pixel-accurate interface design structures.</p>
+
+
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto space-y-10">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-mono text-cyan-400 tracking-widest">// TECHNICAL CAPABILITIES</span>
+                <h2 class="text-3xl font-bold text-white">Core Skill Matrix</h2>
             </div>
-            <div class="glass-card">
-                <i class="fas fa-microchip card-icon"></i>
-                <h3>AI Full-Stack Architecture</h3>
-                <p>Integrating artificial intelligence prompts, model logic, and cloud endpoints into system backends to automate custom workflows.</p>
-            </div>
-            <div class="glass-card">
-                <i class="fab fa-shopify card-icon"></i>
-                <h3>Shopify Store Production</h3>
-                <p>Developing fully engineered premium store dashboards incorporating complex layouts, optimized custom checkout metrics, and configurations.</p>
-            </div>
-            <div class="glass-card">
-                <i class="fas fa-chart-line card-icon"></i>
-                <h3>Graphics & Office Logistics</h3>
-                <p>Providing custom corporate branding layouts and high-speed corporate analytics, advanced report writing, and assignment tracking.</p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="glass-panel p-6 rounded-2xl space-y-3">
+                    <i class="fa-solid fa-code text-2xl text-cyan-400"></i>
+                    <h3 class="text-base font-bold text-white">Frontend Web Architecture</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">HTML5, CSS3, JavaScript (ES6+), Tailwind CSS, smooth responsive layouts, and UI performance tuning.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl space-y-3">
+                    <i class="fa-solid fa-brain text-2xl text-sky-400"></i>
+                    <h3 class="text-base font-bold text-white">AI & Backend Integrations</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Custom REST API endpoints, Node.js logic, LLM wrappers, database connection, and dashboard workflows.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl space-y-3">
+                    <i class="fa-brands fa-shopify text-2xl text-emerald-400"></i>
+                    <h3 class="text-base font-bold text-white">Shopify E-Commerce</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Custom Shopify theme development, Liquid coding, app extensions, and conversion rate optimization.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl space-y-3">
+                    <i class="fa-solid fa-palette text-2xl text-indigo-400"></i>
+                    <h3 class="text-base font-bold text-white">Graphic & Visual Design</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Vector artwork, brand identities, UI wireframes, social banner design, and digital marketing graphics.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl space-y-3">
+                    <i class="fa-solid fa-file-excel text-2xl text-teal-400"></i>
+                    <h3 class="text-base font-bold text-white">MS Office Data Specialist</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Advanced Excel analytical dashboards, automated macros/formulas, data cleansing, and slide decks.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl space-y-3">
+                    <i class="fa-solid fa-cube text-2xl text-purple-400"></i>
+                    <h3 class="text-base font-bold text-white">Interactive Web Graphics</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">WebGL elements, Three.js 3D subtle backgrounds, and canvas animation rendering.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="projects">
-        <div class="section-title">
-            <h2>Production <span>Registry</span></h2>
-        </div>
-        <div class="grid-layout">
-            <div class="glass-card">
-                <i class="fas fa-school card-icon"></i>
-                <h3>Grace Valley Schooling System</h3>
-                <p>Complete execution of administrative web portal systems managing automated operational interfaces.</p>
-                <div class="project-meta"><span class="status-badge"><i class="fas fa-check-circle"></i> System Active</span></div>
+
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto space-y-10">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-mono text-cyan-400 tracking-widest">// PORTFOLIO HIGHLIGHTS</span>
+                <h2 class="text-3xl font-bold text-white">Featured 5 Projects</h2>
             </div>
-            <div class="glass-card">
-                <i class="fas fa-book-reader card-icon"></i>
-                <h3>Al Amal Schooling System</h3>
-                <p>Production release of lightweight web layout maximizing access protocols and resource deployment optimization.</p>
-                <div class="project-meta"><span class="status-badge"><i class="fas fa-check-circle"></i> System Active</span></div>
-            </div>
-            <div class="glass-card">
-                <i class="fas fa-mosque card-icon"></i>
-                <h3>Idara Tun Noor Madarsa</h3>
-                <p>Custom structural platform built from raw source files to establish highly optimized regional user accessibility matrices.</p>
-                <div class="project-meta"><span class="status-badge"><i class="fas fa-check-circle"></i> Fully Optimized</span></div>
-            </div>
-            <div class="glass-card">
-                <i class="fas fa-shopping-bag card-icon"></i>
-                <h3>Ijaz Shops</h3>
-                <p>E-commerce deployment featuring a customized Liquid code layer, performance caching, and highly responsive mobile shopping paths.</p>
-                <div class="project-meta"><span class="status-badge"><i class="fas fa-check-circle"></i> Operational</span></div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-500/20 px-2.5 py-1 rounded">01. AI SUITE</span>
+                        <h3 class="text-lg font-bold text-white">Apex AI Intelligence Platform</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Custom Web Application integrating AI streaming responses with real-time dynamic dashboard visualizers.</p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-500">
+                        Tech: JavaScript, REST API, Tailwind
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-500/20 px-2.5 py-1 rounded">02. SHOPIFY</span>
+                        <h3 class="text-lg font-bold text-white">Luxuria Store Shopify Theme</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">A high-conversion custom Shopify Liquid storefront engineered for rapid page loading and smooth checkout.</p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-500">
+                        Tech: Shopify Liquid, JavaScript, CSS3
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <span class="text-[10px] font-mono text-sky-400 bg-sky-950/60 border border-sky-500/20 px-2.5 py-1 rounded">03. EDTECH PORTAL</span>
+                        <h3 class="text-lg font-bold text-white">EduTech Academic Platform</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Interactive educational student portal featuring course management, quiz systems, and progress tracking.</p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-500">
+                        Tech: Full-Stack Web, Node logic
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <span class="text-[10px] font-mono text-indigo-400 bg-indigo-950/60 border border-indigo-500/20 px-2.5 py-1 rounded">04. UI/UX BRANDING</span>
+                        <h3 class="text-lg font-bold text-white">VisualCraft Design System</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Complete corporate identity package including vector logo design, marketing templates, and UI guidelines.</p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-500">
+                        Tech: Vector Design, UI Prototyping
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between space-y-4 sm:col-span-2 lg:col-span-1">
+                    <div class="space-y-3">
+                        <span class="text-[10px] font-mono text-teal-400 bg-teal-950/60 border border-teal-500/20 px-2.5 py-1 rounded">05. DATA ANALYTICS</span>
+                        <h3 class="text-lg font-bold text-white">DataCore Excel Analytics</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Enterprise MS Excel financial dashboard with automated calculation models and data charts.</p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] font-mono text-slate-500">
+                        Tech: Advanced Excel Formulas, Data Modeling
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <div class="section-title">
-            <h2>Secure <span>Gateway</span></h2>
-        </div>
-        <div class="contact-box">
-            <i class="fas fa-network-wired card-icon" style="font-size: 45px;"></i>
-            <h3>Initiate Direct Network Link</h3>
-            <p>Available for commercial-tier programming contracts, corporate automation frameworks, and active contract engineering assignments.</p>
-            <div class="link-grid">
-                <a href="mailto:solutionsapexecom@gmail.com" class="contact-link-card">
-                    <div><i class="fas fa-envelope"></i> solutionsapexecom@gmail.com</div>
-                    <i class="fas fa-chevron-right arrow-icon"></i>
-                </a>
-                <a href="tel:03112568504" class="contact-link-card">
-                    <div><i class="fas fa-phone"></i> +92 311 2568504</div>
-                    <i class="fas fa-chevron-right arrow-icon"></i>
-                </a>
-                <a href="https://wa.me" target="_blank" class="contact-link-card">
-                    <div><i class="fab fa-whatsapp"></i> Establish WhatsApp Secure Link</div>
-                    <i class="fas fa-chevron-right arrow-icon"></i>
-                </a>
+
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-3xl mx-auto glass-panel p-8 sm:p-12 rounded-3xl space-y-6">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-mono text-cyan-400 tracking-widest">// GET IN TOUCH</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Start A Conversation</h2>
+                <p class="text-slate-400 text-xs">Form Submit karne par message direct mere WhatsApp (+92 310 1122510) par open hoga.</p>
             </div>
+
+            <form id="portfolioContactForm" class="space-y-4">
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-slate-400 text-[10px] font-mono uppercase mb-1">Your Name</label>
+                        <input type="text" id="clientName" required placeholder="Aap ka naam" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cyan-400 transition">
+                    </div>
+                    <div>
+                        <label class="block text-slate-400 text-[10px] font-mono uppercase mb-1">Your Email</label>
+                        <input type="email" id="clientEmail" required placeholder="email@domain.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cyan-400 transition">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-slate-400 text-[10px] font-mono uppercase mb-1">Required Service</label>
+                    <select id="clientService" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cyan-400 transition">
+                        <option value="Web Development & AI Integrations">Web Development & AI Integrations</option>
+                        <option value="Shopify Store Development">Shopify Store Development</option>
+                        <option value="Graphic Design & UI/UX">Graphic Design & UI/UX</option>
+                        <option value="MS Office & Data Analytics">MS Office & Data Analytics</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-slate-400 text-[10px] font-mono uppercase mb-1">Project Details</label>
+                    <textarea id="clientMessage" rows="4" required placeholder="Project k baray mein details likhein..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cyan-400 transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold font-mono py-3.5 rounded-xl transition shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Send Direct To WhatsApp
+                </button>
+            </form>
+
+            <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800/80 text-center text-xs text-slate-400 font-mono">
+                <div>
+                    <i class="fa-solid fa-envelope text-cyan-400 mb-1"></i>
+                    <p>solutionsapexecom@gmail.com</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone text-cyan-400 mb-1"></i>
+                    <p>0311 2568504</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 ANAS WAQAR. All Rights Reserved. Engine Managed Secure Node Deployment.</p>
+
+    <footer class="py-8 text-center text-slate-500 font-mono text-xs border-t border-slate-800/80">
+        <p>&copy; 2026 Anas Waqar. All Rights Reserved.</p>
     </footer>
 
+
     <script>
-        const canvas = document.getElementById('bg-canvas');
-        const ctx = canvas.getContext('2d');
-
-        let width = canvas.width = window.innerWidth;
-        let height = canvas.height = window.innerHeight;
-
-        const particles = [];
-        const particleCount = 55;
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.size = Math.random() * 1.5 + 0.5;
-                this.speedX = Math.random() * 0.3 - 0.15;
-                this.speedY = Math.random() * 0.3 - 0.15;
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x > width) this.x = 0;
-                else if (this.x < 0) this.x = width;
-
-                if (this.y > height) this.y = 0;
-                else if (this.y < 0) this.y = height;
-            }
-
-            draw() {
-                ctx.fillStyle = 'rgba(212, 175, 55, 0.22)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function init() {
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, width, height);
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-            }
-            requestAnimationFrame(animate);
-        }
-
-        window.addEventListener('resize', () => {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        init();
-        animate();
+        // WhatsApp Direct Form Transmission
+        document.getElementById('portfolioContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('clientName').value;
+            const email = document.getElementById('clientEmail').value;
+            const service = document.getElementById('clientService').value;
+            const message = document.getElementById('clientMessage').value;
+
+            const whatsappMsg = `*PORTFOLIO INQUIRY*%0A%0A` +
+                `*Name:* ${encodeURIComponent(name)}%0A` +
+                `*Email:* ${encodeURIComponent(email)}%0A` +
+                `*Service Needed:* ${encodeURIComponent(service)}%0A` +
+                `*Message:* ${encodeURIComponent(message)}`;
+
+            window.open(`https://wa.me/923101122510?text=${whatsappMsg}`, '_blank');
+        });
     </script>
 </body>
 </html>
